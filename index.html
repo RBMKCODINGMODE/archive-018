@@ -479,6 +479,76 @@ body {
   height: auto;
   object-fit: contain;
 }
+
+
+/* ===== ARCHIVE 018: Mobile Layout Fix ===== */
+
+/* 防止页面横向溢出 */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 覆盖 SugarCube 默认的左侧偏移 */
+#story {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 760px !important;
+  box-sizing: border-box;
+}
+
+/* 让每个 Passage 适应屏幕 */
+#passages,
+.passage {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 所有主要内容按容器宽度排列 */
+.archive-header,
+.archive-progress,
+.archive-panel,
+.archive-message,
+.terminal-content,
+.terminal-action {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 图片绝不超出容器 */
+.archive-panel img,
+.dog-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 长英文和路径允许换行 */
+.archive-meta,
+.panel-heading,
+.archive-subtitle,
+.archive-date {
+  overflow-wrap: anywhere;
+}
+
+/* 手机专用 */
+@media (max-width: 600px) {
+  #story {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .passage {
+    padding: 22px 18px !important;
+  }
+
+  .archive-brand {
+    font-size: 23px;
+  }
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Boot" tags="" position="625,250" size="100,100">
 &lt;div class=&quot;terminal-label&quot;&gt;TEMPORAL ARCHIVE // SYSTEM BOOT&lt;/div&gt;
 &lt;h1&gt;ARCHIVE 018&lt;/h1&gt;
