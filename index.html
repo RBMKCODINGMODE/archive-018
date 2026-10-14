@@ -318,7 +318,34 @@ input[type="text"]:focus {
   .archive-brand { font-size: 23px; }
   .archive-message, .clue { font-size: 16px; }
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Boot" tags="" position="625,250" size="100,100">
+/* 修复手机端内容偏右、左侧留白 */
+@media screen and (max-width: 768px) {
+  #ui-bar {
+    display: none !important;
+  }
+
+  #story {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #passages {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .passage {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Boot" tags="" position="625,250" size="100,100">
 &lt;div class=&quot;terminal-label&quot;&gt;TEMPORAL ARCHIVE // SYSTEM BOOT&lt;/div&gt;
 &lt;h1&gt;ARCHIVE 018&lt;/h1&gt;
 &lt;div class=&quot;terminal-content&quot;&gt;
