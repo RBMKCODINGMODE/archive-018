@@ -104,200 +104,169 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="ARCHIVE 018" startnode="1" creator="Twine" creator-version="2.12.1" format="SugarCube" format-version="2.37.3" ifid="99AF2C7A-A5DD-4F11-9C2A-B39CD5D307CB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-/* 页面背景 */
-body {
-  background: #080f1c;
-  color: #d6e5f2;
-  font-family: Consolas, "Courier New", monospace;
-  line-height: 1.5;
+	<tw-storydata name="ARCHIVE 018" startnode="1" creator="Twine" creator-version="2.12.1" format="SugarCube" format-version="2.37.3" ifid="99AF2C7A-A5DD-4F11-9C2A-B39CD5D307CB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ARCHIVE 018 — SugarCube 2.37.3 */
+:root {
+  --bg: #080f1c;
+  --text: #d6e5f2;
+  --cyan: #69e7f4;
+  --muted: #548ca5;
+  --line: #244a5a;
+}
+
+html, body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-
-/* 隐藏 SugarCube 默认侧边栏 */
-#ui-bar {
-  display: none;
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Consolas, "Microsoft YaHei", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  font-style: normal;
 }
-
-/* 内容区域 */
+#ui-bar { display: none; }
 #story {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0;
-  max-width: 760px;
 }
-
-#passages {
+#passages, .passage {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   margin: 0;
 }
-
-.passage {
-  padding: 40px 24px;
-  min-height: 80vh;
-}
-
-/* 标题 */
-h1 {
+.passage { padding: 40px 24px; min-height: 80vh; }
+.passage p { margin: 0 0 12px; }
+.passage h1 {
   color: #f1f7ff;
-  font-size: 2rem;
+  font-size: 25px;
+  font-style: normal;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  margin: 20px 0 28px;
+  letter-spacing: .08em;
+  margin: 16px 0 20px;
 }
 
-/* 终端顶部标识 */
+/* Terminal / story navigation */
+.terminal-label, .archive-subtitle, .archive-date,
+.archive-meta, .panel-heading, .input-heading, .archive-footer {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  font-style: normal;
+}
 .terminal-label {
   color: #66d9e8;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
+  letter-spacing: .12em;
   border-bottom: 1px solid #24364b;
   padding-bottom: 12px;
 }
-
-/* 终端文字 */
 .terminal-content {
-  color: #d6e5f2;
   font-size: 16px;
   line-height: 1.7;
   white-space: pre-line;
 }
-
-/* 交互链接 */
-.terminal-action {
-  margin-top: 30px;
-}
-
+.terminal-action { margin-top: 30px; }
 a, .link-internal, .link-visited {
   color: #66d9e8;
   text-decoration: none;
   cursor: pointer;
 }
+a:hover { color: #fff; }
 
-a:hover {
-  color: #ffffff;
-}
-
-/* 手机适配 */
-@media (max-width: 600px) {
-  .passage {
-    padding: 24px 18px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-
-/* ARCHIVE 018 - Mobile terminal UI */
-
+/* Archive identity verification */
 .archive-header {
   border-bottom: 1px solid #236477;
   padding-bottom: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
-
 .archive-brand {
-  color: #69e7f4;
-  font-size: 24px;
+  color: var(--cyan);
+  font-size: 26px;
   letter-spacing: 3px;
 }
-
-.archive-subtitle,
-.archive-date {
+.archive-subtitle, .archive-date {
   color: #5599b7;
-  font-size: 11px;
   letter-spacing: 1px;
+  overflow-wrap: anywhere;
 }
-
-.archive-date {
-  margin-top: 10px;
-}
-
+.archive-date { margin-top: 10px; }
 .archive-progress {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   color: #55778b;
   font-size: 11px;
-  border-bottom: 1px solid #244a5a;
-  padding-bottom: 16px;
-  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  margin-bottom: 18px;
 }
-
-.archive-progress .active {
-  color: #69e7f4;
-}
-
+.archive-progress .active { color: var(--cyan); }
 .archive-message {
-  line-height: 1.8;
-  margin-bottom: 24px;
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 16px;
 }
-
 .archive-panel {
   border: 1px solid #3a9bae;
-  margin: 24px 0;
+  margin: 16px 0;
   overflow: hidden;
 }
-
 .panel-heading {
-  color: #69e7f4;
+  color: var(--cyan);
   border-bottom: 1px solid #3a9bae;
   padding: 10px 12px;
-  font-size: 11px;
   letter-spacing: 1px;
+  overflow-wrap: anywhere;
 }
-
 .dog-placeholder {
   min-height: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   background: #071523;
   color: #548ca5;
   font-size: 11px;
   letter-spacing: 1px;
-  gap: 12px;
 }
-
-.dog-icon {
-  font-size: 70px;
+.dog-image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
 }
-
 .archive-meta {
-  border-top: 1px solid #244a5a;
+  border-top: 1px solid var(--line);
   padding: 12px;
   color: #73b9d5;
-  font-size: 11px;
   line-height: 1.8;
   overflow-wrap: anywhere;
 }
-
 .clue-heading {
-  color: #69e7f4;
+  color: var(--cyan);
+  font-size: 17px;
   font-weight: bold;
   margin: 22px 0 12px;
 }
-
-.clue {
-  margin-bottom: 12px;
-  line-height: 1.7;
-}
-
+.clue { font-size: 17px; margin-bottom: 10px; line-height: 1.7; }
 .hint-box {
   color: #f4ce84;
   border-left: 2px solid #f4ce84;
+  background: #1a2028;
   padding: 12px;
   margin: 16px 0;
-  background: #1a2028;
+  font-size: 16px;
+  line-height: 1.7;
 }
-
-.input-heading {
-  color: #69e7f4;
-  margin: 28px 0 10px;
-  font-size: 12px;
-}
-
+.input-heading { color: var(--cyan); margin: 28px 0 10px; }
+.passage a, .passage button, .passage input { font-size: 17px; font-style: normal; }
 input[type="text"] {
   box-sizing: border-box;
   width: 100%;
@@ -306,163 +275,27 @@ input[type="text"] {
   border-radius: 2px;
   color: #e6faff;
   padding: 14px;
-  font-size: 16px;
   outline: none;
 }
-
 input[type="text"]:focus {
   border-color: #a2f6ff;
   box-shadow: 0 0 12px #1c758a66;
 }
-
 .submit-area button {
   width: 100%;
   margin-top: 18px;
   padding: 15px;
   background: #08202d;
   border: 1px solid #58d4e5;
-  color: #69e7f4;
-  font-size: 16px;
+  color: var(--cyan);
   letter-spacing: 2px;
 }
-
 .verify-error {
   color: #ff8383;
   border-left: 2px solid #ff8383;
   padding: 12px;
   margin-top: 15px;
 }
-
-.archive-footer {
-  border-top: 1px solid #244a5a;
-  margin-top: 36px;
-  padding-top: 16px;
-  color: #548ca5;
-  font-size: 11px;
-  text-align: right;
-}
-
-@media (max-width: 600px) {
-  #story {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .passage {
-    padding: 20px 18px;
-  }
-
-  .archive-brand {
-    font-size: 21px;
-  }
-}
-
-
-/* ARCHIVE 018 - Typography & Spacing Fix */
-
-/* 中文正文 */
-body {
-  font-family: Consolas, "Microsoft YaHei", sans-serif;
-  font-size: 17px;
-  font-style: normal;
-  line-height: 1.65;
-}
-
-/* 缩小默认段落间距 */
-.passage p {
-  margin: 0 0 12px;
-}
-
-/* 统一标题 */
-.passage h1 {
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 600;
-  margin: 16px 0 20px;
-}
-
-/* 终端英文标识 */
-.terminal-label,
-.archive-subtitle,
-.archive-date,
-.archive-meta,
-.panel-heading,
-.input-heading,
-.archive-footer {
-  font-family: Consolas, "Courier New", monospace;
-  font-style: normal;
-  font-size: 13px;
-}
-
-/* 正文说明 */
-.archive-message {
-  font-size: 17px;
-  font-style: normal;
-  line-height: 1.75;
-  margin-bottom: 16px;
-}
-
-/* 线索 */
-.clue,
-.clue-heading {
-  font-size: 17px;
-  font-style: normal;
-  margin-bottom: 10px;
-}
-
-/* 提示 */
-.hint-box {
-  font-size: 16px;
-  font-style: normal;
-  line-height: 1.7;
-}
-
-/* 交互文字 */
-.passage a,
-.passage button,
-.passage input {
-  font-size: 17px;
-  font-style: normal;
-}
-
-/* 缩小大块留白 */
-.archive-header {
-  margin-bottom: 14px;
-}
-
-.archive-progress {
-  margin-bottom: 18px;
-  padding-bottom: 12px;
-}
-
-.archive-panel {
-  margin: 16px 0;
-}
-
-.archive-brand {
-  font-size: 26px;
-}
-
-/* 手机竖屏 */
-@media (max-width: 600px) {
-  .passage {
-    padding: 20px 16px;
-  }
-
-  .archive-brand {
-    font-size: 23px;
-  }
-
-  .passage h1 {
-    font-size: 23px;
-  }
-
-  .archive-message,
-  .clue {
-    font-size: 16px;
-  }
-}
-
 .verify-success {
   color: #66e8bd;
   border-left: 2px solid #66e8bd;
@@ -471,83 +304,19 @@ body {
   margin-top: 16px;
   line-height: 1.8;
 }
-
-.dog-image {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
+.archive-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 36px;
+  padding-top: 16px;
+  color: var(--muted);
+  text-align: right;
 }
 
-
-/* ===== ARCHIVE 018: Mobile Layout Fix ===== */
-
-/* 防止页面横向溢出 */
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* 覆盖 SugarCube 默认的左侧偏移 */
-#story {
-  margin: 0 auto !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: 760px !important;
-  box-sizing: border-box;
-}
-
-/* 让每个 Passage 适应屏幕 */
-#passages,
-.passage {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* 所有主要内容按容器宽度排列 */
-.archive-header,
-.archive-progress,
-.archive-panel,
-.archive-message,
-.terminal-content,
-.terminal-action {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* 图片绝不超出容器 */
-.archive-panel img,
-.dog-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* 长英文和路径允许换行 */
-.archive-meta,
-.panel-heading,
-.archive-subtitle,
-.archive-date {
-  overflow-wrap: anywhere;
-}
-
-/* 手机专用 */
 @media (max-width: 600px) {
-  #story {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .passage {
-    padding: 22px 18px !important;
-  }
-
-  .archive-brand {
-    font-size: 23px;
-  }
+  .passage { padding: 22px 18px; }
+  .passage h1 { font-size: 23px; }
+  .archive-brand { font-size: 23px; }
+  .archive-message, .clue { font-size: 16px; }
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Boot" tags="" position="625,250" size="100,100">
 &lt;div class=&quot;terminal-label&quot;&gt;TEMPORAL ARCHIVE // SYSTEM BOOT&lt;/div&gt;
@@ -582,8 +351,7 @@ html, body {
 &lt;p&gt;访问权限：身份验证后开放&lt;/p&gt;
 
 [[&gt; 开始身份验证|Verify]]
-</tw-passagedata><tw-passagedata pid="3" name="Verify" tags="" position="625,500" size="100,100">
-&lt;&lt;nobr&gt;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Verify" tags="" position="625,500" size="100,100">&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $dogName = &quot;&quot;&gt;&gt;
 
 &lt;div class=&quot;archive-header&quot;&gt;
